@@ -41,6 +41,10 @@ bot.onText(/\/hax/, async (msg, match) => {
   await bot.sendMessage(msg.chat.id, (await grabHax(msg)));
 })
 
+bot.onText(/\/start/, async (msg, match) => {
+  await bot.sendMessage(msg.chat.id, `Hello, ${msg.from.first_name}!\nIn this bot you can check free seats for woiden.id and hax.co.id sites. \nAvailable commands:\n/hax - Prints free seats for hax.co.id\n/woiden - Prints free seats for woiden.id .\nYou can also use this bot in inline mode. Good luck and, please, do not abuse it. =)`);
+})
+
 bot.onText(/\/woiden/, async (msg, match) => {
   await bot.sendMessage(msg.chat.id, (await grabWoiden(msg)));
 })
