@@ -48,7 +48,9 @@ bot.onText(/\/start/, async (msg, match) => {
 bot.onText(/\/woiden/, async (msg, match) => {
   await bot.sendMessage(msg.chat.id, (await grabWoiden(msg)));
 })
-
+bot.onText(/\/both/, async (msg, match) => {
+  await bot.sendMessage(msg.chat.id, (await grabHax(msg))+"\n"+(await grabWoiden(msg)));
+})
 bot.on("inline_query", async (query) => {
   if (query.query != "") return;
   let hax = await grabHax();
