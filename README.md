@@ -1,4 +1,9 @@
 # Hax.co.id and Woiden.id Checker-bot
+## Prerequisites
+You need to have installed:\
+ \- node\
+ \- npm\
+ \- git
 ## Installing
 ### Clone repo
 ```git clone https://codeberg.org/aqendo/telegram_hax_woiden_bot.git```\
